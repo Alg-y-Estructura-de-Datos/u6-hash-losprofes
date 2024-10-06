@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "D:\Documentos\Programación III\Hash\Ejemplos" -B "D:\Documentos\Programación III\Hash\Ejemplos\cmake-build-debug"
+"C:\Program Files\JetBrains\CLion 2024.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "C:\Users\salce\OneDrive\Documentos\Programación III\Unidad 06 Hash\Ejercicios2" -B "C:\Users\salce\OneDrive\Documentos\Programación III\Unidad 06 Hash\Ejercicios2\cmake-build-debug"
 CMake Warning (dev) in CMakeLists.txt:
   No project() command is present.  The top-level CMakeLists.txt file must
   contain a literal, direct call to the project() command.  Add a line of
@@ -18,6 +18,6 @@ CMake Warning (dev) in CMakeLists.txt:
   both commands.
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
--- Configuring done (0.0s)
+-- Configuring done (0.4s)
 -- Generating done (0.0s)
--- Build files have been written to: D:/Documentos/Programación III/Hash/Ejemplos/cmake-build-debug
+-- Build files have been written to: C:/Users/salce/OneDrive/Documentos/Programación III/Unidad 06 Hash/Ejercicios2/cmake-build-debug

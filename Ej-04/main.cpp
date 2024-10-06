@@ -1,69 +1,86 @@
 #include <iostream>
-#include "../Hash/HashMap.h"
+#include "../Hash/HashMapList.h"
 
 using namespace std;
 
-void menu() {
-    cout << "1. Registrar voto" << endl;
-    cout << "2. Verificar voto" << endl;
-    cout << "3. Eliminar voto" << endl;
-    cout << "4. Mostrar todos los votos" << endl;
-    cout << "5. Salir" << endl;
-    cout << "Elija una opcion: ";
+// Función hash simple para las matrículas (clave)
+unsigned int hashFunc(unsigned int clave) {
+    return clave;  // Retorna el valor de la clave como el índice hash
 }
 
 int main() {
-    HashMap<int, string> votos(10);  // HashMap de 10 posiciones
-    int opcion, id;
-    string candidato;
+    unsigned int tamanioTabla = 10;  // Tamaño de la tabla hash
+    HashMapList<unsigned int, string> mapaEstudiantes(tamanioTabla, hashFunc);
 
+    int opcion;
     do {
-        menu();
+        cout << "\nSistema de Gestion de Estudiantes\n";
+        cout << "1. Agregar estudiante\n";
+        cout << "2. Eliminar estudiante\n";
+        cout << "3. Buscar estudiante\n";
+        cout << "4. Mostrar lista completa de estudiantes\n";
+        cout << "5. Verificar si el sistema esta vacio\n";
+        cout << "0. Salir\n";
+        cout << "Seleccione una opcion: ";
         cin >> opcion;
 
         switch (opcion) {
-            case 1:
-                cout << "Ingrese ID del votante: ";
-                cin >> id;
-                cout << "Ingrese nombre del candidato: ";
-                cin >> candidato;
+            case 1: {
+                unsigned int matricula;
+                string nombre;
+                cout << "Ingrese numero de matricula: ";
+                cin >> matricula;
+                cout << "Ingrese nombre del estudiante: ";
+                cin.ignore();  // Limpiar el buffer
+                getline(cin, nombre);
+                mapaEstudiantes.put(matricula, nombre);
+                cout << "Estudiante agregado con exito.\n";
+                break;
+            }
+            case 2: {
+                unsigned int matricula;
+                cout << "Ingrese numero de matricula del estudiante a eliminar: ";
+                cin >> matricula;
                 try {
-                    votos.put(id, candidato);
-                    cout << "Voto registrado con exito!" << endl;
+                    mapaEstudiantes.remove(matricula);
+                    cout << "Estudiante eliminado con exito.\n";
                 } catch (int e) {
-                    cout << "Error: Colision al registrar voto." << endl;
+                    cout << "Estudiante no encontrado.\n";
                 }
                 break;
-            case 2:
-                cout << "Ingrese ID del votante: ";
-                cin >> id;
+            }
+            case 3: {
+                unsigned int matricula;
+                cout << "Ingrese numero de matricula del estudiante a buscar: ";
+                cin >> matricula;
                 try {
-                    cout << "Voto: " << votos.get(id) << endl;
+                    mapaEstudiantes.getList(matricula);
                 } catch (int e) {
-                    cout << "Error: Votante no encontrado." << endl;
+                    cout << "Estudiante no encontrado.\n";
                 }
                 break;
-            case 3:
-                cout << "Ingrese ID del votante a eliminar: ";
-                cin >> id;
-                try {
-                    votos.remove(id);
-                    cout << "Voto eliminado con exito!" << endl;
-                } catch (int e) {
-                    cout << "Error: Votante no encontrado." << endl;
+            }
+            case 4: {
+                cout << "Lista completa de estudiantes: \n";
+                mapaEstudiantes.print();
+                break;
+            }
+            case 5: {
+                if (mapaEstudiantes.esVacio()) {
+                    cout << "El sistema esta vacio.\n";
+                } else {
+                    cout << "El sistema NO esta vacio.\n";
                 }
                 break;
-            case 4:
-                votos.print();
+            }
+            case 0: {
+                cout << "Saliendo del sistema.\n";
                 break;
-            case 5:
-                cout << "Saliendo..." << endl;
-                break;
+            }
             default:
-                cout << "Opción invalida!" << endl;
+                cout << "Opción invalida. Intente nuevamente.\n";
         }
-
-    } while (opcion != 5);
+    } while (opcion != 0);
 
     return 0;
 }

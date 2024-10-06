@@ -1,6 +1,4 @@
-add_executable(U06-E01 Ej-01/main.cpp
-        Lista/nodo.h
-        Lista/Lista.h)
+add_executable(U06-E01 Ej-01/main.cpp)
 
 add_executable(U06-E02 Ej-02/main.cpp)
 
