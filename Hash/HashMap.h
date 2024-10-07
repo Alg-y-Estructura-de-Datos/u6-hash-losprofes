@@ -99,7 +99,20 @@ void HashMap<K, T>::put(K clave, T valor)
 }
 
 template <class K, class T>
-void HashMap<K, T>::remove(K clave) {}
+void HashMap<K, T>::remove(K clave) {
+    unsigned int pos = hashFuncP(clave) % tamanio;
+
+    if (tabla[pos] == NULL) {
+        throw 404; // No encontrado
+    }
+
+    if (tabla[pos]->getClave() == clave) {
+        delete tabla[pos]; // Eliminar la entrada
+        tabla[pos] = NULL;  // Marcar la posición como vacía
+    } else {
+        throw 409; // Conflicto: la clave no coincide
+        }
+}
 
 template <class K, class T>
 bool HashMap<K, T>::esVacio()
