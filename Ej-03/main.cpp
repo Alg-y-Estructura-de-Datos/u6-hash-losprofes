@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../Hash/HashMap.h"
+#include "../Hash/HashMapList.h"
 
 using namespace std;
 
@@ -13,7 +13,7 @@ void menu() {
 }
 
 int main() {
-    HashMap<int, string> votos(10);  // HashMap de 10 posiciones
+    HashMapList<int, string> votos(11);  // HashMap de 10 posiciones
     int opcion, id;
     string candidato;
 

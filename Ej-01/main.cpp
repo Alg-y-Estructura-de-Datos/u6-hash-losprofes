@@ -14,7 +14,7 @@ unsigned int hashString(string clave) { // Cambiado a string en lugar de const s
 }
 
 int main() {
-    unsigned int tamanoTabla = 10; // Tamaño de la tabla hash
+    unsigned int tamanoTabla = 11; // Tamaño de la tabla hash
     HashMap<string, string> diccionario(tamanoTabla, hashString);
 
     int opcion;
@@ -36,8 +36,15 @@ int main() {
                 cout << "Ingrese el significado: ";
                 cin.ignore(); // Para ignorar el salto de línea
                 getline(cin, significado);
-                diccionario.put(palabra, significado);
-                cout << "Palabra agregada correctamente.\n";
+                try{
+                    diccionario.put(palabra, significado);
+                    cout << "Palabra agregada correctamente.\n";
+                }catch(int e){
+                    if(e==409)
+                        cout << "colision, intente otra.\n";
+                }
+
+
                 break;
 
             case 2:

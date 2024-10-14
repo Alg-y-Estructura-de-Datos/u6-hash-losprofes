@@ -13,7 +13,7 @@ void menu() {
 }
 
 int main() {
-    HashMap<int, string> empleados(10);  // HashMap de 10 posiciones
+    HashMap<int, string> empleados(11);  // HashMap de 10 posiciones
     int opcion, id;
     string nombre;
 
