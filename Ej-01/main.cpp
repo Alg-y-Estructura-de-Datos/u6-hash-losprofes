@@ -7,14 +7,19 @@ using namespace std;
 // Función hash simple para cadenas
 unsigned int hashString(string clave) { // Cambiado a string en lugar de const string&
     unsigned int hash = 0;
-    for (char c : clave) {
-        hash += c;
+    for(int i = 0; i < clave.length(); i++){
+
+        hash += clave[i];
     }
     return hash;
+//    for (char c : clave) {//versión simplificada bucle for
+//        hash += c;
+//    }
+
 }
 
 int main() {
-    unsigned int tamanoTabla = 11; // Tamaño de la tabla hash
+    unsigned int tamanoTabla = 11; // Tamaño de la tabla hash, número primo!!
     HashMap<string, string> diccionario(tamanoTabla, hashString);
 
     int opcion;

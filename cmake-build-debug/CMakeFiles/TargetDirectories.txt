@@ -3,5 +3,6 @@ C:/Users/lover/Desktop/u6-hash-losprofes/cmake-build-debug/CMakeFiles/U06-E02.di
 C:/Users/lover/Desktop/u6-hash-losprofes/cmake-build-debug/CMakeFiles/U06-E03.dir
 C:/Users/lover/Desktop/u6-hash-losprofes/cmake-build-debug/CMakeFiles/U06-E04.dir
 C:/Users/lover/Desktop/u6-hash-losprofes/cmake-build-debug/CMakeFiles/U06-E05.dir
+C:/Users/lover/Desktop/u6-hash-losprofes/cmake-build-debug/CMakeFiles/parcialito.dir
 C:/Users/lover/Desktop/u6-hash-losprofes/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/lover/Desktop/u6-hash-losprofes/cmake-build-debug/CMakeFiles/rebuild_cache.dir

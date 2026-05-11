@@ -7,3 +7,4 @@ add_executable(U06-E03 Ej-03/main.cpp)
 add_executable(U06-E04 Ej-04/main.cpp)
 
 add_executable(U06-E05 Ej-05/main.cpp)
+add_executable(parcialito parcialito.cpp)

@@ -15,7 +15,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					]
 				}
 			],
@@ -34,7 +35,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					]
 				}
 			],
@@ -73,6 +75,13 @@
 					"id" : "U06-E05::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-U06-E05-Debug-21e9a96781961259934d.json",
 					"name" : "U06-E05",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "parcialito::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-parcialito-Debug-129433d4d9c13ec4808b.json",
+					"name" : "parcialito",
 					"projectIndex" : 0
 				}
 			]

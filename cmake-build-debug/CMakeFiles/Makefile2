@@ -67,6 +67,7 @@ all: CMakeFiles/U06-E02.dir/all
 all: CMakeFiles/U06-E03.dir/all
 all: CMakeFiles/U06-E04.dir/all
 all: CMakeFiles/U06-E05.dir/all
+all: CMakeFiles/parcialito.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -79,6 +80,7 @@ clean: CMakeFiles/U06-E02.dir/clean
 clean: CMakeFiles/U06-E03.dir/clean
 clean: CMakeFiles/U06-E04.dir/clean
 clean: CMakeFiles/U06-E05.dir/clean
+clean: CMakeFiles/parcialito.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -210,6 +212,32 @@ U06-E05: CMakeFiles/U06-E05.dir/rule
 CMakeFiles/U06-E05.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\U06-E05.dir\build.make CMakeFiles/U06-E05.dir/clean
 .PHONY : CMakeFiles/U06-E05.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/parcialito.dir
+
+# All Build rule for target.
+CMakeFiles/parcialito.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\parcialito.dir\build.make CMakeFiles/parcialito.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\parcialito.dir\build.make CMakeFiles/parcialito.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\lover\Desktop\u6-hash-losprofes\cmake-build-debug\CMakeFiles --progress-num=11,12 "Built target parcialito"
+.PHONY : CMakeFiles/parcialito.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/parcialito.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lover\Desktop\u6-hash-losprofes\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/parcialito.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\lover\Desktop\u6-hash-losprofes\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/parcialito.dir/rule
+
+# Convenience name for target.
+parcialito: CMakeFiles/parcialito.dir/rule
+.PHONY : parcialito
+
+# clean rule for target.
+CMakeFiles/parcialito.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\parcialito.dir\build.make CMakeFiles/parcialito.dir/clean
+.PHONY : CMakeFiles/parcialito.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

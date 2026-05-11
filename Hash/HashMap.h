@@ -16,9 +16,9 @@ private:
     unsigned int (*hashFuncP)(K clave);
 
 public:
-    explicit HashMap(unsigned int k);
+    explicit HashMap(unsigned int k);//constructor que usa funcion Hash por defecto
 
-    HashMap(unsigned int k, unsigned int (*hashFuncP)(K clave));
+    HashMap(unsigned int k, unsigned int (*hashFuncP)(K clave)); // constructor que usa función hash pasada por argumento
 
     T get(K clave);
 
@@ -87,7 +87,7 @@ T HashMap<K, T>::get(K clave)
 template <class K, class T>
 void HashMap<K, T>::put(K clave, T valor)
 {
-    unsigned int pos = hashFuncP(clave) % tamanio;
+    unsigned int pos = hashFuncP(clave) % tamanio;//siempre se calcula el módulo con respecto al tamaño
 
     if (tabla[pos] != NULL)
     {

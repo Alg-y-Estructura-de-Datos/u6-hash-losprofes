@@ -24,41 +24,41 @@ int main() {
         switch (opcion) {
             case 1:
                 cout << "Ingrese ID del votante: ";
-            cin >> id;
-            cout << "Ingrese nombre del candidato: ";
-            cin >> candidato;
-            try { //no es necesario ya que no hay colisiones. Se deja de recordatorio
-                votos.put(id, candidato);
-                cout << "Voto registrado con exito!" << endl;
-            } catch (int e) {
-                //cout << "no debería entrar nunca aquí" << endl;
-            }
-            break;
+                cin >> id;
+                cout << "Ingrese nombre del candidato: ";
+                cin >> candidato;
+                try { //no es necesario ya que no hay colisiones. Se deja de recordatorio
+                    votos.put(id, candidato);
+                    cout << "Voto registrado con exito!" << endl;
+                } catch (int e) {
+                    cout << "no debería entrar nunca aquí" << endl;
+                }
+                break;
             case 2:
                 cout << "Ingrese ID del votante: ";
-            cin >> id;
-            try {
-                cout << "Voto: " << votos.get(id) << endl;
-            } catch (int e) {
-                cout << "Error: Votante no encontrado." << endl;
-            }
-            break;
+                cin >> id;
+                try {
+                    cout << "Voto: " << votos.get(id) << endl;
+                } catch (int e) {
+                    cout << "Error: Votante no encontrado." << endl;
+                }
+                break;
             case 3:
                 cout << "Ingrese ID del votante a eliminar: ";
-            cin >> id;
-            try {
-                votos.remove(id);
-                cout << "Voto eliminado con exito!" << endl;
-            } catch (int e) {
-                cout << "Error: Votante no encontrado." << endl;
-            }
-            break;
+                cin >> id;
+                try {
+                    votos.remove(id);
+                    cout << "Voto eliminado con exito!" << endl;
+                } catch (int e) {
+                    cout << "Error: Votante no encontrado." << endl;
+                }
+                break;
             case 4:
                 votos.print();
-            break;
+                break;
             case 5:
                 cout << "Saliendo..." << endl;
-            break;
+                break;
             default:
                 cout << "Opción invalida!" << endl;
         }

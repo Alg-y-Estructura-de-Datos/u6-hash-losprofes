@@ -17,9 +17,9 @@ private:
     unsigned int (*hashFuncP)(K clave);
 
 public:
-    explicit HashMapList(unsigned int k);
+    explicit HashMapList(unsigned int k);//constructor de func hash por defecto
 
-    HashMapList(unsigned int k, unsigned int (*hashFuncP)(K clave));
+    HashMapList(unsigned int k, unsigned int (*hashFuncP)(K clave)); //constructor con funcion hash por argumento
 
     void getList(K clave);
 
@@ -77,7 +77,7 @@ void HashMapList<K, T>::put(K clave, T valor) {
 }
 template <class K, class T>
 void HashMapList<K, T>::remove(K clave) {
-    unsigned int pos = hashFuncP(clave) % tamanio; // Calcular el índice hash
+    unsigned int pos = hashFuncP(clave) % tamanio; // Calcular el índice hash con el módulo según el tamanio
 
     // Verificar si hay una lista enlazada en esa posición
     if (tabla[pos] != nullptr) {
@@ -178,7 +178,7 @@ template <class K, class T>
 void HashMapList<K, T>::getList(K clave) { //Método que devuelve la lista según la clave que recibe
     unsigned int pos = hashFuncP(clave) % tamanio;
 
-    if(tabla[pos] == NULL) {
+    if(tabla[pos] == NULL) {//si no hay lista
         throw 404;
     }
 

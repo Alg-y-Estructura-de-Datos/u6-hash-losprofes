@@ -180,6 +180,19 @@ U06-E05/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\U06-E05.dir\build.make CMakeFiles/U06-E05.dir/build
 .PHONY : U06-E05/fast
 
+#=============================================================================
+# Target rules for targets named parcialito
+
+# Build rule for target.
+parcialito: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 parcialito
+.PHONY : parcialito
+
+# fast build rule for target.
+parcialito/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\parcialito.dir\build.make CMakeFiles/parcialito.dir/build
+.PHONY : parcialito/fast
+
 Ej-01/main.obj: Ej-01/main.cpp.obj
 .PHONY : Ej-01/main.obj
 
@@ -300,6 +313,30 @@ Ej-05/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\U06-E05.dir\build.make CMakeFiles/U06-E05.dir/Ej-05/main.cpp.s
 .PHONY : Ej-05/main.cpp.s
 
+parcialito.obj: parcialito.cpp.obj
+.PHONY : parcialito.obj
+
+# target to build an object file
+parcialito.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\parcialito.dir\build.make CMakeFiles/parcialito.dir/parcialito.cpp.obj
+.PHONY : parcialito.cpp.obj
+
+parcialito.i: parcialito.cpp.i
+.PHONY : parcialito.i
+
+# target to preprocess a source file
+parcialito.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\parcialito.dir\build.make CMakeFiles/parcialito.dir/parcialito.cpp.i
+.PHONY : parcialito.cpp.i
+
+parcialito.s: parcialito.cpp.s
+.PHONY : parcialito.s
+
+# target to generate assembly for a file
+parcialito.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\parcialito.dir\build.make CMakeFiles/parcialito.dir/parcialito.cpp.s
+.PHONY : parcialito.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -313,6 +350,7 @@ help:
 	@echo ... U06-E03
 	@echo ... U06-E04
 	@echo ... U06-E05
+	@echo ... parcialito
 	@echo ... Ej-01/main.obj
 	@echo ... Ej-01/main.i
 	@echo ... Ej-01/main.s
@@ -328,6 +366,9 @@ help:
 	@echo ... Ej-05/main.obj
 	@echo ... Ej-05/main.i
 	@echo ... Ej-05/main.s
+	@echo ... parcialito.obj
+	@echo ... parcialito.i
+	@echo ... parcialito.s
 .PHONY : help
 
 
