@@ -27,11 +27,11 @@ int main() {
             cin >> id;
             cout << "Ingrese nombre del candidato: ";
             cin >> candidato;
-            try {
+            try { //no es necesario ya que no hay colisiones. Se deja de recordatorio
                 votos.put(id, candidato);
                 cout << "Voto registrado con exito!" << endl;
             } catch (int e) {
-                cout << "Error: Colision al registrar voto." << endl;
+                //cout << "no debería entrar nunca aquí" << endl;
             }
             break;
             case 2:
@@ -54,7 +54,7 @@ int main() {
             }
             break;
             case 4:
-                votos.print();
+                votos.prgitint();
             break;
             case 5:
                 cout << "Saliendo..." << endl;

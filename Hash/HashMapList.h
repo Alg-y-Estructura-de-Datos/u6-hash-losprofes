@@ -97,7 +97,7 @@ void HashMapList<K, T>::remove(K clave) {
         // Si no se encuentra la clave
         throw 404;
     } else {
-        throw 409;
+        throw 404; // Si no se encuentra la clave
     }
 }
 
@@ -123,7 +123,7 @@ template <class K, class T>
 T HashMapList<K, T>::get(K clave) {
     unsigned int pos = hashFuncP(clave) % tamanio;
 
-    if (tabla[pos] == nullptr) {
+    if (tabla[pos] == nullptr) {//no se encontró la clave buscada
         throw 404;
     }
 
