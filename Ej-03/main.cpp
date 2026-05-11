@@ -54,7 +54,7 @@ int main() {
             }
             break;
             case 4:
-                votos.prgitint();
+                votos.print();
             break;
             case 5:
                 cout << "Saliendo..." << endl;
